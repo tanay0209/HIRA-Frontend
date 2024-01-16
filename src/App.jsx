@@ -1,11 +1,16 @@
+import { Outlet } from 'react-router-dom'
 import './App.css'
+import { Navbar } from './components/Navbar'
 
 function App() {
 
 
   return (
     <>
-      <h1 className='text-center text-7xl mt-5 text-white'>Sea Jewels</h1>
+      <Navbar />
+      <main>
+        <Outlet />
+      </main>
     </>
   )
 }
