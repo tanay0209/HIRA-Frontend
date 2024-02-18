@@ -3,7 +3,8 @@ import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
-import { HomeScreen, About, Categories, Contact } from "./pages"
+import { HomeScreen, About, Contact } from "./pages"
+import { Login, Signup } from "./components"
 
 import { ThemeProvider } from "@material-tailwind/react";
 
@@ -19,11 +20,16 @@ const router = createBrowserRouter([
         path: '/about',
         element: <About />
       }, {
-        path: '/categories',
-        element: <Categories />
-      }, {
         path: '/contact',
         element: <Contact />
+      },
+      {
+        path: '/login',
+        element: <Login />
+      },
+      {
+        path: '/signup',
+        element: <Signup />
       }
     ]
   }

@@ -1,14 +1,13 @@
 import { Outlet } from 'react-router-dom'
 import './App.css'
-import { Navbar } from './components/Navbar'
+import { BottomNav, TopNav } from './components'
 
 function App() {
-
-
   return (
     <>
-      <Navbar />
-      <main>
+      <TopNav />
+      <BottomNav />
+      <main className='mt-[7rem]'>
         <Outlet />
       </main>
     </>
