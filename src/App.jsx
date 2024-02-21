@@ -1,6 +1,6 @@
 import { Outlet } from 'react-router-dom'
 import './App.css'
-import { BottomNav, TopNav } from './components'
+import { BottomNav, Footer, TopNav } from './components'
 
 function App() {
   return (
@@ -10,6 +10,7 @@ function App() {
       <main className='mt-[7rem]'>
         <Outlet />
       </main>
+      <Footer />
     </>
   )
 }
