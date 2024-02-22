@@ -1,16 +1,21 @@
-import Categories from './Categories';
+import CollectionSection from './CollectionSection';
 import { NavItem, TopNav, BottomNav, NavitemDropdown } from './Navbar';
-import CategoryCard from './CategoryCard';
-
-import Login from './Login';
-import Signup from './Signup';
+import SectionItem from './SectionItem';
+import ImageCarousel from './ImageCarousel';
+import Footer from './Footer';
+import ServiceSection from './ServiceSection';
+import ServiceItem from './ServiceItem';
+import StyleSection from './StyleSection';
 export {
-  Categories,
-  CategoryCard,
+  CollectionSection,
+  SectionItem,
   NavItem,
   TopNav,
   BottomNav,
   NavitemDropdown,
-  Login,
-  Signup,
+  ImageCarousel,
+  Footer,
+  ServiceItem,
+  ServiceSection,
+  StyleSection
 };

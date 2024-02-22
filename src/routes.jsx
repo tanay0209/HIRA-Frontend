@@ -1,6 +1,6 @@
 import { createBrowserRouter } from 'react-router-dom'
 import App from './App'
-import { HomeScreen, About, Contact, Login, Signup, Category } from "./pages"
+import { HomeScreen, About, Contact, Login, Signup, Collections } from "./pages"
 
 const router = createBrowserRouter([
     {
@@ -15,7 +15,15 @@ const router = createBrowserRouter([
                 path: '/categories',
                 children: [{
                     path: ':category',
-                    element: <Category />
+                    element: <Collections />
+                }]
+            },
+            ,
+            {
+                path: '/styles',
+                children: [{
+                    path: ':style',
+                    element: <Collections />
                 }]
             },
             {

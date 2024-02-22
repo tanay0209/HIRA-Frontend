@@ -9,8 +9,10 @@ module.exports = withMT({
   theme: {
     extend: {
       colors: {
-        primary: '#7FB9C4',
-        golden: '#F8E3CE',
+        primary: '#7DB0AD',
+        secondary: '#5B8786',
+        tertiary: '#938A7C',
+        golden: '#E2DBD0',
       },
     },
   },

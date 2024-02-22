@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import Utils from '../utils'
 
 
-function CollectionItem({ title }) {
+function SectionItem({ title, slug }) {
 
     const path = title.includes(" ") ? Utils.removeSpaces(title) : Utils.convertFirstLettertoLowercase(title)
 
@@ -12,11 +12,11 @@ function CollectionItem({ title }) {
         <>
             <div className='flex flex-col items-center'>
                 <Link
-                    to={`categories/${path}`}
+                    to={`${slug}/${path}`}
                 >
                     <img
-                        className='rounded-full h-28 w-28 lg:h-40 lg:w-40 mx-4 border-2 border-primary'
-                        src={background} alt="" />
+                        className='rounded-full size-36 lg:size-44 mx-4 shadow-md'
+                        src={background} alt="Background" />
                     <div className='font-bold mt-2 text-center'>{title}</div>
                 </Link>
             </div>
@@ -24,4 +24,4 @@ function CollectionItem({ title }) {
     )
 }
 
-export default CollectionItem
+export default SectionItem
