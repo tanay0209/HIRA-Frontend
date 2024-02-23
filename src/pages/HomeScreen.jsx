@@ -1,5 +1,5 @@
 import React from 'react'
-import { ImageCarousel, CollectionSection, ServiceSection, StyleSection } from "../components"
+import { ImageCarousel, CollectionSection, ServiceSection, StyleSection, BestSellerSection } from "../components"
 
 
 function HomeScreen() {
@@ -9,6 +9,7 @@ function HomeScreen() {
             <CollectionSection />
             <ServiceSection />
             <StyleSection />
+            <BestSellerSection />
         </div>
     );
 }

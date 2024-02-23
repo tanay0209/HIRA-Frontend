@@ -1,7 +1,13 @@
 import NavItem from './NavItem';
-import TopNav from './TopNav';
+import TopNavigation from './TopNavigation';
 import NavitemDropdown from './NavitemDropdown';
-import NavIcons from './NavIcons';
-import BottomNav from './BottomNav';
+import NavIconItem from './NavIconItem';
+import BottomNavigation from './BottomNavigation';
 
-export { NavIcons, NavItem, TopNav, BottomNav, NavitemDropdown };
+export {
+  NavIconItem as NavIcons,
+  NavItem,
+  TopNavigation as TopNav,
+  BottomNavigation as BottomNav,
+  NavitemDropdown,
+};
