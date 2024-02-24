@@ -4,14 +4,14 @@ import { BottomNav, Footer, TopNav } from './components'
 
 function App() {
   return (
-    <>
+    <div>
       <TopNav />
       <BottomNav />
       <main className='mt-[7rem]'>
         <Outlet />
       </main>
       <Footer />
-    </>
+    </div>
   )
 }
 

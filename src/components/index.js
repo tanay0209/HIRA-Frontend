@@ -1,11 +1,12 @@
-import CollectionSection from './CollectionSection';
 import { NavItem, TopNav, BottomNav, NavitemDropdown } from './Navbar';
-import SectionItem from './SectionItem';
 import ImageCarousel from './ImageCarousel';
 import Footer from './Footer';
-import ServiceSection from './ServiceSection';
-import ServiceItem from './ServiceItem';
-import StyleSection from './StyleSection';
+import { ServiceItem, ServiceSection } from './Services';
+import { BestSellerSection, BestSellerCarousel, BestSellerItem } from "./BestSeller"
+import { CollectionSection, CollectionItem, SectionItem, StyleSection } from "./Collections"
+import { TestimonialSection, TestimonialCard } from "./Testimonial"
+
+
 export {
   CollectionSection,
   SectionItem,
@@ -17,5 +18,11 @@ export {
   Footer,
   ServiceItem,
   ServiceSection,
-  StyleSection
+  StyleSection,
+  BestSellerItem,
+  BestSellerSection,
+  BestSellerCarousel,
+  CollectionItem,
+  TestimonialCard,
+  TestimonialSection
 };
