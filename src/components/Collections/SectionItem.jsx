@@ -1,10 +1,10 @@
 import React from 'react'
-import background from "../assets/images/category_background.jpg"
+import background from "../../assets/images/category_background.jpg"
 import { Link } from 'react-router-dom'
-import Utils from '../utils'
+import Utils from '../../utils'
 
 
-function SectionItem({ title, slug }) {
+function SectionItem({ title }) {
 
     const path = title.includes(" ") ? Utils.removeSpaces(title) : Utils.convertFirstLettertoLowercase(title)
 
@@ -12,7 +12,7 @@ function SectionItem({ title, slug }) {
         <>
             <div className='flex flex-col items-center'>
                 <Link
-                    to={`${slug}/${path}`}
+                    to={`collections/${path}`}
                 >
                     <img
                         className='rounded-full size-36 lg:size-44 mx-4 shadow-md'

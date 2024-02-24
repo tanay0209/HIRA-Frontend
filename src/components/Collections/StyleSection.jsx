@@ -1,8 +1,9 @@
-import React from 'react';
-import { SectionItem } from '.';
-import background from '../assets/images/category_background.jpg';
+import React from 'react'
+import background from '../../assets/images/category_background.jpg';
+import { SectionItem } from '..';
 
-const categories = [
+
+const styles = [
     {
         title: 'Jewellery Set',
     },
@@ -20,7 +21,7 @@ const categories = [
     },
 ];
 
-function CollectionSection() {
+function StyleSection() {
     return (
         <div
             style={{
@@ -33,15 +34,15 @@ function CollectionSection() {
             className='w-full h-screen'
         >
             <h2 className='text-4xl lg:text-5xl text-secondary text-center pt-4 mt-4'>
-                Shop by Category
+                Shop by Style
             </h2>
             <div className='flex h-2/3 lg:h-3/4 items-center max-w-2xl m-auto justify-center flex-wrap mt-4 gap-3'>
-                {categories.map(category => (
-                    <SectionItem key={category.title} title={category.title} slug={'categories'} />
+                {styles.map(style => (
+                    <SectionItem key={style.title} title={style.title} />
                 ))}
             </div>
         </div>
     );
 }
 
-export default CollectionSection;
+export default StyleSection

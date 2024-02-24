@@ -3,16 +3,17 @@ import NavItem from './NavItem'
 
 const menuItems = [
   {
+    title: 'Shop',
+    link: '/shop'
+  },
+  {
     title: "Home",
     link: '/'
   }, {
     title: 'About',
     link: '/about'
   },
-  {
-    title: 'shop',
-    link: '/shop'
-  },
+
 
   {
     title: 'Contact',

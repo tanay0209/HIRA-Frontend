@@ -1,8 +1,8 @@
 import React from 'react'
-import { ServiceItem } from '.'
-import authetic from '../assets/services/authentic.png'
-import shipping from "../assets/services/delivery.png"
-import guarantee from "../assets/services/guarantee.png"
+import { ServiceItem } from '..'
+import authetic from '../../assets/services/authentic.png'
+import shipping from "../../assets/services/delivery.png"
+import guarantee from "../../assets/services/guarantee.png"
 
 
 const services = [

@@ -1,20 +1,19 @@
 import React from 'react'
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-import background from '../assets/images/category_background.jpg';
+import background from '../../assets/images/category_background.jpg';
 import BestSellerItem from './BestSellerItem';
 const responsive = {
     superLargeDesktop: {
-        // the naming can be any, depends on you.
         breakpoint: { max: 4000, min: 3000 },
         items: 5
     },
     desktop: {
-        breakpoint: { max: 3000, min: 1024 },
+        breakpoint: { max: 3000, min: 750 },
         items: 3
     },
     tablet: {
-        breakpoint: { max: 1024, min: 464 },
+        breakpoint: { max: 750, min: 464 },
         items: 2
     },
     mobile: {
