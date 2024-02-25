@@ -1,12 +1,12 @@
 import { Outlet } from 'react-router-dom'
 import './App.css'
-import { BottomNav, Footer, TopNav } from './components'
+import { Footer, TopNavigation, BottomNavigation } from './components'
 
 function App() {
   return (
     <div>
-      <TopNav />
-      <BottomNav />
+      <TopNavigation />
+      <BottomNavigation />
       <main className='mt-[7rem]'>
         <Outlet />
       </main>

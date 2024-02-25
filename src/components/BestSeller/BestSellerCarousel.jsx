@@ -64,7 +64,7 @@ function BestSellerCarousel() {
             transitionDuration={2000}
         >
             {items.map((item) => {
-                return <BestSellerItem key={item.id} price={item.price} title={item.title} image={item.image} />
+                return <BestSellerItem key={item.id} id={item.id} price={item.price} title={item.title} image={item.image} />
             })}
         </Carousel>
 

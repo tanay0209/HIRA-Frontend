@@ -1,10 +1,10 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
-import NavitemDropdown from './NavitemDropdown';
+import { Dropdown } from '.'
 
 function NavItem({ title, link }) {
     return (
-        title === 'Shop' ? <NavitemDropdown
+        title === 'Shop' ? <Dropdown
             title={title} link={link} /> : <NavLink
                 to={link}
                 style={({ isActive }) => ({

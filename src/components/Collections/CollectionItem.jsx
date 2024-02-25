@@ -2,9 +2,11 @@ import React from 'react'
 
 import { CiHeart } from "react-icons/ci";
 import { Link } from 'react-router-dom';
+import { AddToCartButton, IncreaseOrDecreaseCountButton } from "../../components"
 
 
 function CollectionItem({ title, price, image }) {
+    let count = 0;
     return (
         <Link
             to={`/product/${title}`}
@@ -28,7 +30,7 @@ function CollectionItem({ title, price, image }) {
                     <p>{price}</p>
                 </div>
                 {/* Add to Cart Button */}
-                <button className='w-full h-1/2 p-2  cursor-pointer bg-primary text-white hover:bg-secondary transition-all duration-200'>Add To Cart</button>
+                {count === 0 ? <AddToCartButton /> : <IncreaseOrDecreaseCountButton />}
             </div></Link>
     )
 }
