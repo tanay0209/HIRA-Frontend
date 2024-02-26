@@ -2,7 +2,7 @@ import React from 'react'
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import background from '../../assets/images/category_background.jpg';
-import BestSellerItem from './BestSellerItem';
+import CarouselItem from './CarouselItem';
 const responsive = {
     superLargeDesktop: {
         breakpoint: { max: 4000, min: 3000 },
@@ -50,7 +50,7 @@ const items = [{
 ]
 
 
-function BestSellerCarousel() {
+function ProductCarousel() {
     return (
         <Carousel
             responsive={responsive}
@@ -59,12 +59,12 @@ function BestSellerCarousel() {
             showDots={true}
             infinite={true}
             autoPlay={responsive.deviceType !== "mobile" ? true : false}
-            autoPlaySpeed={2000}
+            autoPlaySpeed={3000}
             keyBoardControl={true}
             transitionDuration={2000}
         >
             {items.map((item) => {
-                return <BestSellerItem key={item.id} id={item.id} price={item.price} title={item.title} image={item.image} />
+                return <CarouselItem key={item.id} item={item}/>
             })}
         </Carousel>
 
@@ -72,4 +72,4 @@ function BestSellerCarousel() {
     )
 }
 
-export default BestSellerCarousel
+export default ProductCarousel

@@ -1,37 +1,34 @@
 import React from 'react'
 
-import { CiHeart } from "react-icons/ci";
 import { Link } from 'react-router-dom';
-import { AddToCartButton, IncreaseOrDecreaseCountButton } from "../../components"
+import { Button, IncreaseOrDecreaseCountButton, WishlistButton } from "../../components"
 
 
-function CollectionItem({ title, price, image }) {
+function CollectionItem({ item }) {
     let count = 0;
+    const { id, title, image, price } = item
     return (
         <Link
             to={`/product/${title}`}
+            state={{ productDetails: item }}
         >
-            <div className='bg-white flex flex-col'>
+            <div className='bg-white flex flex-col relative z-4'>
                 {/* Image Container */}
                 <div className='relative h-2/3'>
                     <img src={image}
                         className='h-full w-full'
                         alt="" />
-                    {/* Wishlist Button */}
-                    <div className='absolute top-4 right-2 bg-white rounded-full p-1 cursor-pointer  hover:shadow-md'>
-                        <CiHeart
-                            className='size-6' />
-                    </div>
-
                 </div>
+                {/* Wishlist Button */}
+                <WishlistButton classname={'top-4'} />
                 {/* Details Container */}
                 <div className='h-1/2 p-3'>
                     <p>{title}</p>
                     <p>{price}</p>
                 </div>
                 {/* Add to Cart Button */}
-                {count === 0 ? <AddToCartButton /> : <IncreaseOrDecreaseCountButton />}
-            </div></Link>
+                {count === 0 ? <Button text={'Add to Cart'} /> : <Button text={'Added to Cart'} />}
+            </div></Link >
     )
 }
 

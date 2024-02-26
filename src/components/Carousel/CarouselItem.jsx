@@ -1,10 +1,11 @@
-import React from 'react'
+
 import { Link } from 'react-router-dom'
 
-function BestSellerItem({ id,image, title, price }) {
+function CarouselItem({ item }) {
+    const { id, image, title, price } = item
     return (
         <Link
-        to={`product/${id}`}>
+            to={`product/${id}`}>
             <div className='p-8 flex flex-col justify-center items-center'>
                 <img src={image} alt=""
                     className='size-48 rounded-md'
@@ -20,4 +21,4 @@ function BestSellerItem({ id,image, title, price }) {
     )
 }
 
-export default BestSellerItem
+export default CarouselItem
