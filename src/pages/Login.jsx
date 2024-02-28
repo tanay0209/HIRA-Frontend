@@ -33,7 +33,7 @@ function Login() {
                 })}
                     type="text"
                     placeholder='Email'
-                    className='border-none rounded-md  focus:ring-0 focus:ring-offset-0'
+                    className='border rounded-md  focus:ring-0 focus:ring-offset-0'
                 />
                 {errors.email && <div className='text-red-500'>{errors.email.message}</div>}
                 <input {...register("password", {
@@ -45,7 +45,7 @@ function Login() {
                 })}
                     type="password"
                     placeholder='Password'
-                    className='border-none rounded-md focus:ring-0 focus:ring-offset-0'
+                    className='border rounded-md focus:ring-0 focus:ring-offset-0'
                 />
                 {errors.password && <div className='text-red-500'>{errors.password.message}</div>}
 

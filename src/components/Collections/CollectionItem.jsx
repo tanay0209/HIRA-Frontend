@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { Button, IncreaseOrDecreaseCountButton, WishlistButton } from "../../components"
 
 
-function CollectionItem({ item }) {
+function CollectionItem({ item, isWishlistItem = false }) {
     let count = 0;
     const { id, title, image, price } = item
     return (
@@ -12,7 +12,7 @@ function CollectionItem({ item }) {
             to={`/product/${title}`}
             state={{ productDetails: item }}
         >
-            <div className='bg-white flex flex-col relative z-4'>
+            <div className='bg-gray-200 flex flex-col relative z-4'>
                 {/* Image Container */}
                 <div className='relative h-2/3'>
                     <img src={image}
@@ -20,7 +20,7 @@ function CollectionItem({ item }) {
                         alt="" />
                 </div>
                 {/* Wishlist Button */}
-                <WishlistButton classname={'top-4'} />
+                {isWishlistItem ? <></> : <WishlistButton classname={'top-4'} />}
                 {/* Details Container */}
                 <div className='h-1/2 p-3'>
                     <p>{title}</p>

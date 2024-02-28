@@ -19,7 +19,7 @@ function Signup() {
     }
 
     return (
-        <div className='mt-[12rem] flex flex-col lg:max-w-3xl items-center justify-center mx-auto max-w-80'>
+        <div className='mt-8 flex flex-col lg:max-w-3xl items-center justify-center mx-auto max-w-80'>
             <h1
                 className='text-center text-3xl m-3'
             >
@@ -31,7 +31,7 @@ function Signup() {
                 })}
                     type="text"
                     placeholder='First Name'
-                    className='border-none rounded-md focus:ring-0 focus:ring-offset-0'
+                    className='border rounded-md focus:ring-0 focus:ring-offset-0'
                 />
                 {errors.firstName && <div className='text-red-500'>{errors.firstName.message}</div>}
 
@@ -42,7 +42,7 @@ function Signup() {
                 })}
                     type="text"
                     placeholder='Last name'
-                    className='border-none rounded-md  focus:ring-0 focus:ring-offset-0'
+                    className='border rounded-md focus:ring-0 focus:ring-offset-0'
                 />
                 {errors.lastName && <div className='text-red-500'>{errors.lastName.message}</div>}
 
@@ -54,7 +54,7 @@ function Signup() {
                 })}
                     type="text"
                     placeholder='Email'
-                    className='border-none rounded-md  focus:ring-0 focus:ring-offset-0'
+                    className='border rounded-md  focus:ring-0 focus:ring-offset-0'
                 />
                 {errors.email && <div className='text-red-500'>{errors.email.message}</div>}
                 <input {...register("password", {
@@ -66,7 +66,7 @@ function Signup() {
                 })}
                     type="password"
                     placeholder='Password'
-                    className='border-none rounded-md focus:ring-0 focus:ring-offset-0'
+                    className='border rounded-md focus:ring-0 focus:ring-offset-0'
                 />
                 {errors.password && <div className='text-red-500'>{errors.password.message}</div>}
 

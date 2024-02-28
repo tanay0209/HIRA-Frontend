@@ -14,7 +14,7 @@ const icons = [
         title: "Account"
     },
     {
-        path: "/",
+        path: "/wishlist",
         component: <BsHeart />,
         title: "Wishlist"
     },
