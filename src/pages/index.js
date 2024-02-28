@@ -5,5 +5,5 @@ import Login from './Login';
 import Signup from './Signup';
 import Collections from './Collections';
 import ProductDetail from './ProductDetail';
-
-export { HomeScreen, About, Contact, Login, Signup, Collections, ProductDetail };
+import Wishlist from './Wishlist'
+export { HomeScreen, About, Contact, Login, Signup, Collections, ProductDetail, Wishlist };

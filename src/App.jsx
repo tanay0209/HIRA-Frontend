@@ -4,15 +4,17 @@ import { Footer, TopNavigation, BottomNavigation } from './components'
 import { useEffect } from 'react';
 function App() {
   const location = useLocation();
-
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [location]);
+
+
+
   return (
-    <div>
+    <div className='flex flex-col min-h-screen'>
       <TopNavigation />
       <BottomNavigation />
-      <main className='mt-[7rem]'>
+      <main className='mt-[7rem] flex-1'>
         <Outlet />
       </main>
       <Footer />

@@ -1,6 +1,7 @@
 import { createBrowserRouter } from 'react-router-dom'
 import App from './App'
-import { HomeScreen, About, Contact, Login, Signup, Collections, ProductDetail } from "./pages"
+import { HomeScreen, About, Contact, Login, Signup, Collections, ProductDetail, Wishlist } from "./pages"
+import { AdminRoute } from './components'
 
 const router = createBrowserRouter([
     {
@@ -15,7 +16,7 @@ const router = createBrowserRouter([
                 path: '/collections',
                 children: [{
                     path: ':collection',
-                    element: <Collections />,
+                    element: <Collections />
                 }]
             },
             {
@@ -28,9 +29,11 @@ const router = createBrowserRouter([
             {
                 path: '/about',
                 element: <About />
+
             }, {
                 path: '/contact',
                 element: <Contact />
+
             },
             {
                 path: '/login',
@@ -39,7 +42,52 @@ const router = createBrowserRouter([
             {
                 path: '/signup',
                 element: <Signup />
-            }
+            },
+            {
+                path: '/admin/dashboard',
+                element: <AdminRoute>
+                    { }
+                </AdminRoute>
+            },
+            {
+                path: '/admin/create/category',
+                element: <AdminRoute>
+                    { }
+                </AdminRoute>
+            },
+            {
+                path: '/admin/categories',
+                element: <AdminRoute>
+                    { }
+                </AdminRoute>
+            },
+            {
+                path: '/admin/products',
+                element: <AdminRoute>
+                    { }
+                </AdminRoute>
+            },
+            {
+                path: '/admin/create/product',
+                element: <AdminRoute>
+                    { }
+                </AdminRoute>
+            }, {
+                path: '/admin/update/product/:productId',
+                element: <AdminRoute>
+                    { }
+                </AdminRoute>
+            },
+            {
+                path: '/cart',
+                element: <></>
+
+            },
+            {
+                path: '/wishlist',
+                element: <Wishlist />
+
+            },
         ]
     }
 ])
