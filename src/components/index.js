@@ -8,6 +8,8 @@ import BestSellerSection from './BestSellerSection';
 import Footer from './Footer';
 import ProductSpeciality from './ProductSpeciality';
 import AdminRoute from './AdminRoute'
+import CartItem from './CartItem';
+
 export {
   NavItem,
   TopNavigation,
@@ -39,5 +41,7 @@ export {
   Footer,
   ProductSpeciality,
 
-  AdminRoute
+  AdminRoute,
+  CartItem
+
 };

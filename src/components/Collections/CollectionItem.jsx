@@ -20,7 +20,7 @@ function CollectionItem({ item, isWishlistItem = false }) {
                         alt="" />
                 </div>
                 {/* Wishlist Button */}
-                {isWishlistItem ? <></> : <WishlistButton classname={'top-4'} />}
+                {isWishlistItem ? <WishlistButton isWishlistItem={true} classname='top-4' /> : <WishlistButton classname={'top-4'} />}
                 {/* Details Container */}
                 <div className='h-1/2 p-3'>
                     <p>{title}</p>

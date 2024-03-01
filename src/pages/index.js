@@ -6,4 +6,7 @@ import Signup from './Signup';
 import Collections from './Collections';
 import ProductDetail from './ProductDetail';
 import Wishlist from './Wishlist'
-export { HomeScreen, About, Contact, Login, Signup, Collections, ProductDetail, Wishlist };
+import Cart from './Cart';
+
+
+export { HomeScreen, About, Contact, Login, Signup, Collections, ProductDetail, Wishlist, Cart };

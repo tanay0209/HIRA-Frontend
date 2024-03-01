@@ -19,7 +19,7 @@ const icons = [
         title: "Wishlist"
     },
     {
-        path: "/",
+        path: "/cart",
         component: <BsCart2 />,
         title: "Cart"
     },

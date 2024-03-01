@@ -1,6 +1,6 @@
 import { createBrowserRouter } from 'react-router-dom'
 import App from './App'
-import { HomeScreen, About, Contact, Login, Signup, Collections, ProductDetail, Wishlist } from "./pages"
+import { HomeScreen, About, Contact, Login, Signup, Collections, ProductDetail, Wishlist, Cart } from "./pages"
 import { AdminRoute } from './components'
 
 const router = createBrowserRouter([
@@ -80,7 +80,7 @@ const router = createBrowserRouter([
             },
             {
                 path: '/cart',
-                element: <></>
+                element: <Cart />
 
             },
             {

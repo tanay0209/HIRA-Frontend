@@ -17,7 +17,7 @@ function App() {
       <main className='mt-[7rem] flex-1'>
         <Outlet />
       </main>
-      <Footer />
+      {location.pathname === '/cart' ? <></> : <Footer />}
     </div>
   )
 }
