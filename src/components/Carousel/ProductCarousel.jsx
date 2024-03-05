@@ -50,21 +50,21 @@ const items = [{
 ]
 
 
-function ProductCarousel() {
+function ProductCarousel({ className = '', duration }) {
     return (
         <Carousel
             responsive={responsive}
-            className='max-w-4xl mx-auto mt-6'
+            className={`w-full ${className}`}
             swipeable={true}
             showDots={true}
             infinite={true}
             autoPlay={responsive.deviceType !== "mobile" ? true : false}
-            autoPlaySpeed={3000}
+            autoPlaySpeed={duration ? duration : 4000}
             keyBoardControl={true}
             transitionDuration={2000}
         >
             {items.map((item) => {
-                return <CarouselItem key={item.id} item={item}/>
+                return <CarouselItem key={item.id} item={item} />
             })}
         </Carousel>
 

@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button, CartItem } from '../components';
+import { Button, CartItem, Layout } from '../components';
 import background from '../assets/images/category_background.jpg';
 
 const product = {
@@ -12,7 +12,7 @@ const product = {
 
 function Cart() {
     return (
-        <div className='lg:max-w-7xl md:max-w-3xl mx-auto max-w-lg md:px-4 my-8 flex flex-col'>
+        <Layout>
             <h2 className='text-4xl uppercase font-semibold p-4 text-center md:text-left'>Shopping Cart</h2>
             <div className='flex flex-col lg:flex-row mt-4'>
                 {/* Order Details */}
@@ -29,7 +29,7 @@ function Cart() {
                     <Button text={'Checkout Securely'} />
                 </div>
             </div>
-        </div>
+        </Layout>
     )
 }
 

@@ -1,5 +1,5 @@
-import { NavItem, TopNavigation, BottomNavigation, Dropdown, DropDownMenuItem, NavIconItem } from './Navbar';
-import { Button, WishlistButton, IncreaseOrDecreaseCountButton } from './Buttons';
+import { Dropdown, TopNavigation, BottomNav, NavItem, NavIconItem } from './Navbar';
+import { Button, WishlistButton, IncreaseOrDecreaseCountButton, OutlineButton } from './Buttons';
 import { ImageCarousel, CarouselItem, ProductCarousel } from './Carousel'
 import { CollectionSection, CollectionItem, SectionItem, StyleSection } from "./Collections"
 import { ServiceItem, ServiceSection } from './Services';
@@ -9,18 +9,19 @@ import Footer from './Footer';
 import ProductSpeciality from './ProductSpeciality';
 import AdminRoute from './AdminRoute'
 import CartItem from './CartItem';
-
+import OrderItem from './OrderItem'
+import Layout from './Layout';
 export {
   NavItem,
   TopNavigation,
-  BottomNavigation,
   Dropdown,
-  DropDownMenuItem,
+  BottomNav,
   NavIconItem,
 
   Button,
   IncreaseOrDecreaseCountButton,
   WishlistButton,
+  OutlineButton,
 
   ImageCarousel,
   CarouselItem,
@@ -42,6 +43,8 @@ export {
   ProductSpeciality,
 
   AdminRoute,
-  CartItem
+  CartItem,
+  OrderItem,
+  Layout
 
 };

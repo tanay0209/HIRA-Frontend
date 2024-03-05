@@ -1,6 +1,6 @@
 import { createBrowserRouter } from 'react-router-dom'
 import App from './App'
-import { HomeScreen, About, Contact, Login, Signup, Collections, ProductDetail, Wishlist, Cart } from "./pages"
+import { HomeScreen, About, Contact, Login, Signup, Collections, ProductDetail, Wishlist, Cart, Orders, Profile } from "./pages"
 import { AdminRoute } from './components'
 
 const router = createBrowserRouter([
@@ -88,6 +88,14 @@ const router = createBrowserRouter([
                 element: <Wishlist />
 
             },
+            {
+                path: '/my-orders',
+                element: <Orders />
+            },
+            {
+                path: '/profile',
+                element: <Profile />
+            }
         ]
     }
 ])

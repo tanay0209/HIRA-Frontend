@@ -1,7 +1,8 @@
 import { Outlet, useLocation } from 'react-router-dom'
 import './App.css'
-import { Footer, TopNavigation, BottomNavigation } from './components'
+import { Footer, TopNavigation, BottomNav } from './components'
 import { useEffect } from 'react';
+
 function App() {
   const location = useLocation();
   useEffect(() => {
@@ -13,11 +14,11 @@ function App() {
   return (
     <div className='flex flex-col min-h-screen'>
       <TopNavigation />
-      <BottomNavigation />
+      <BottomNav />
       <main className='mt-[7rem] flex-1'>
         <Outlet />
       </main>
-      {location.pathname === '/cart' ? <></> : <Footer />}
+      <Footer />
     </div>
   )
 }

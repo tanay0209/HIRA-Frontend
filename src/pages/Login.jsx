@@ -1,6 +1,7 @@
 import React from 'react'
 import { useForm } from 'react-hook-form'
 import { Link } from 'react-router-dom';
+import { Layout } from '../components';
 
 
 // TODO: MAKE AND HANDLE API CALL
@@ -19,7 +20,7 @@ function Login() {
     }
 
     return (
-        <div className='mt-[12rem] flex flex-col lg:max-w-3xl items-center justify-center mx-auto max-w-80'>
+        <Layout>
             <h1
                 className='text-center text-3xl m-3'
             >
@@ -57,7 +58,7 @@ function Login() {
                     {isSubmitting ? "Submitting" : "Login"}
                 </button>
             </form>
-            <span
+            <div
                 className='text-center mt-2'
             >
                 Dont have an account?
@@ -66,8 +67,8 @@ function Login() {
                     className='underline ml-2'
                 >
                     Signup
-                </Link></span>
-        </div>
+                </Link></div>
+        </Layout>
     )
 }
 

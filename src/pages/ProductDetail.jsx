@@ -1,13 +1,13 @@
 import React from 'react'
 import { useLocation } from 'react-router-dom'
-import { ProductCarousel, Button, ProductSpeciality, WishlistButton } from '../components'
+import { ProductCarousel, Button, ProductSpeciality, WishlistButton, Layout, OutlineButton } from '../components'
 import { GiBigDiamondRing } from "react-icons/gi";
 
 function ProductDetail() {
     const { state } = useLocation()
     const { id, title, image, price } = state.productDetails
     return (
-        <div className='max-w-2xl md:max-w-6xl mx-auto p-8'>
+        <Layout>
             <div className='grid md:grid-cols-2 gap-4'>
                 {/* Left Container holding Image */}
                 <div className=' relative'>
@@ -73,7 +73,7 @@ function ProductDetail() {
                     </div>
 
                     <div className='flex gap-x-2'>
-                        <Button text={'Try Now'} />
+                        <OutlineButton text={'Try Now'} />
                         <Button text={'Add to Cart'} />
                     </div>
                 </div>
@@ -82,7 +82,7 @@ function ProductDetail() {
             <div className='mt-8'>
                 <h2 className='text-center text-3xl font-bold text-secondary'>Similar Products</h2>
                 <div>
-                    <ProductCarousel />
+                    <ProductCarousel duration={2000} />
                 </div>
             </div>
             {/* Frequently Bought Together */}
@@ -93,7 +93,7 @@ function ProductDetail() {
                 </div>
             </div>
 
-        </div>
+        </Layout>
     )
 }
 

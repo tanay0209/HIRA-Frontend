@@ -1,7 +1,8 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
 import background from '../assets/images/category_background.jpg';
-import { CollectionItem, Layout } from '../components';
+import { Layout, OrderItem } from '../components';
+
+
 const items = [
     {
         id: 1,
@@ -41,20 +42,19 @@ const items = [
     },
 ]
 
-
-function Collections() {
-    const { collection } = useParams();
+function Orders() {
     return (
         <Layout>
-            <h2 className='text-4xl text-center uppercase font-semibold p-4'>{collection}</h2>
-            <div className='w-full grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 lg:gap-8 gap-3'>
-                {/* Card Container */}
+            <div className='flex flex-col'>
+                <h2 className='text-4xl uppercase font-semibold py-4 text-center md:text-left'>
+                    Your Orders
+                </h2>
                 {items.map(item => {
-                    return <CollectionItem item={item} key={item.id} />
+                    return <OrderItem />
                 })}
             </div>
         </Layout>
     );
 }
 
-export default Collections;
+export default Orders;
