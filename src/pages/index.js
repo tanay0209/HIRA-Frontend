@@ -9,4 +9,8 @@ import Wishlist from './Wishlist'
 import Cart from './Cart';
 import Orders from './Orders';
 import Profile from './Profile';
-export { HomeScreen, About, Contact, Login, Signup, Collections, ProductDetail, Wishlist, Cart, Orders, Profile };
+import ForgotPassword from './ForgotPassword';
+import ResetPassword from './ResetPassword';
+
+
+export { HomeScreen, About, Contact, Login, Signup, Collections, ProductDetail, Wishlist, Cart, Orders, Profile, ForgotPassword, ResetPassword };

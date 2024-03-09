@@ -1,6 +1,6 @@
 import { createBrowserRouter } from 'react-router-dom'
 import App from './App'
-import { HomeScreen, About, Contact, Login, Signup, Collections, ProductDetail, Wishlist, Cart, Orders, Profile } from "./pages"
+import { HomeScreen, About, Contact, Login, Signup, Collections, ProductDetail, Wishlist, Cart, Orders, Profile, ForgotPassword, ResetPassword } from "./pages"
 import { AdminRoute } from './components'
 
 const router = createBrowserRouter([
@@ -95,6 +95,15 @@ const router = createBrowserRouter([
             {
                 path: '/profile',
                 element: <Profile />
+            },
+            {
+                path: '/forgot-password',
+                element: <ForgotPassword />
+            }
+            ,
+            {
+                path: '/reset-password',
+                element: <ResetPassword />
             }
         ]
     }

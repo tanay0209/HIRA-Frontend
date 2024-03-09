@@ -10,7 +10,6 @@ function App() {
   }, [location]);
 
 
-
   return (
     <div className='flex flex-col min-h-screen'>
       <TopNavigation />

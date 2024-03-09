@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useLocation } from 'react-router-dom'
 import { ProductCarousel, Button, ProductSpeciality, WishlistButton, Layout, OutlineButton } from '../components'
 import { GiBigDiamondRing } from "react-icons/gi";
@@ -6,7 +6,10 @@ import { GiBigDiamondRing } from "react-icons/gi";
 function ProductDetail() {
     const { state } = useLocation()
     const { id, title, image, price } = state.productDetails
+    const [giftWrap, setGiftWrap] = useState(false)
+    console.log(giftWrap);
     return (
+
         <Layout>
             <div className='grid md:grid-cols-2 gap-4'>
                 {/* Left Container holding Image */}
@@ -69,6 +72,13 @@ function ProductDetail() {
                                 size={24}
                                 className='mr-4'
                             />} title={'Lifetime Plating'} />
+                        </div>
+                        <div className='flex items-center'>
+                            <input type="checkbox"
+                                className='ml-2 focus:ring-0 focus:ring-offset-0'
+                                onClick={() => setGiftWrap(!giftWrap)}
+                            />
+                            <p className='ml-4'>Add Gift wrap for Rs. 50</p>
                         </div>
                     </div>
 
