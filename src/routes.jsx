@@ -1,7 +1,12 @@
 import { createBrowserRouter } from 'react-router-dom'
 import App from './App'
-import { HomeScreen, About, Contact, Login, Signup, Collections, ProductDetail, Wishlist, Cart, Orders, Profile, ForgotPassword, ResetPassword } from "./pages"
+import { HomeScreen, About, Contact, Login, Signup, Collections, ProductDetail, Wishlist, Cart, Orders, Profile, ForgotPassword, ResetPassword, CreateProduct } from "./pages"
 import { AdminRoute } from './components'
+import Bracelet from './temp/Bracelet'
+import Broch from './temp/Broch'
+import Ring from './temp/Ring'
+import LadiesRings from './temp/LadiesRings'
+import AdminDashboard from './pages/AdminDashboard'
 
 const router = createBrowserRouter([
     {
@@ -12,12 +17,32 @@ const router = createBrowserRouter([
                 path: '/',
                 element: <HomeScreen />
             },
+            // {
+            //     path: '/collections',
+            //     children: [{
+            //         path: ':collection',
+            //         element: <Collections />
+            //     }]
+            // },
             {
-                path: '/collections',
-                children: [{
-                    path: ':collection',
-                    element: <Collections />
-                }]
+                path: '/collections/Bracelet',
+                element: <Bracelet />
+
+            },
+            {
+                path: '/collections/Broch',
+                element: <Broch />
+
+            },
+            {
+                path: '/collections/Ring',
+                element: <Ring />
+
+            },
+            {
+                path: '/collections/Ladies',
+                element: <LadiesRings />
+
             },
             {
                 path: '/product',
@@ -45,9 +70,10 @@ const router = createBrowserRouter([
             },
             {
                 path: '/admin/dashboard',
-                element: <AdminRoute>
-                    { }
-                </AdminRoute>
+                element:
+                    <AdminRoute>
+                        <AdminDashboard />
+                    </AdminRoute>
             },
             {
                 path: '/admin/create/category',
@@ -68,9 +94,9 @@ const router = createBrowserRouter([
                 </AdminRoute>
             },
             {
-                path: '/admin/create/product',
+                path: '/admin/create-product',
                 element: <AdminRoute>
-                    { }
+                    <CreateProduct />
                 </AdminRoute>
             }, {
                 path: '/admin/update/product/:productId',

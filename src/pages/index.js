@@ -11,6 +11,8 @@ import Orders from './Orders';
 import Profile from './Profile';
 import ForgotPassword from './ForgotPassword';
 import ResetPassword from './ResetPassword';
+import AdminDashboard from '../pages/AdminDashboard';
+import CreateProduct from './CreateProduct';
 
 
-export { HomeScreen, About, Contact, Login, Signup, Collections, ProductDetail, Wishlist, Cart, Orders, Profile, ForgotPassword, ResetPassword };
+export { HomeScreen, About, Contact, Login, Signup, Collections, ProductDetail, Wishlist, Cart, Orders, Profile, ForgotPassword, ResetPassword, AdminDashboard, CreateProduct };

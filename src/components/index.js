@@ -11,6 +11,13 @@ import AdminRoute from './AdminRoute'
 import CartItem from './CartItem';
 import OrderItem from './OrderItem'
 import Layout from './Layout';
+import Coupon from './Coupon';
+import Coupons from './Coupons'
+import StarRating from './StarRating';
+
+import AdminLayout from './AdminLayout';
+
+
 export {
   NavItem,
   TopNavigation,
@@ -45,6 +52,10 @@ export {
   AdminRoute,
   CartItem,
   OrderItem,
-  Layout
+  Layout,
+  Coupon,
+  Coupons,
+  StarRating,
+  AdminLayout
 
 };
