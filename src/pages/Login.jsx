@@ -1,23 +1,29 @@
 import React, { useState } from 'react'
 import { useForm } from 'react-hook-form'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Layout } from '../components';
 import { CiSearch } from "react-icons/ci";
+import { useDispatch, useSelector } from 'react-redux';
+import { login } from '../store/authSlice';
 
 
-// TODO: MAKE AND HANDLE API CALL
+
 function Login() {
     const { register, handleSubmit, setError, formState: { errors, isSubmitting }, reset } = useForm()
+    const dispatch = useDispatch()
+    const navigate = useNavigate()
+    const users = useSelector(state => state.auth.users)
     const [showPassword, setShowPassword] = useState(false)
     const onSubmit = (data) => {
         reset()
-        try {
-
-        } catch (error) {
-            setError("email", {
-                message: "This email is already taken"
-            })
+        const currUser = users.findIndex(curr => curr.email === data.email)
+        if (currUser === -1) {
+            setError("root", { type: 'custom', message: "User not registered" })
+            return
         }
+        dispatch(login(data))
+        navigate('/')
+
     }
 
     return (
@@ -67,6 +73,7 @@ function Login() {
                     >
                         {isSubmitting ? "Submitting" : "Login"}
                     </button>
+                    {errors.root && <div className='text-red-500 text-center'>{errors.root.message}</div>}
                 </form>
                 <p
                     className='text-left mt-2 text-gray-500 hover:underline inline-block'

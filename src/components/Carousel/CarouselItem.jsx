@@ -1,21 +1,23 @@
 
 import { Link } from 'react-router-dom'
 
-function CarouselItem({ item }) {
-    const { id, image, title, price } = item
+function CarouselItem({ product, useReplace = false }) {
     return (
         <Link
-            to={`product/${id}`}>
-            <div className='p-8 flex flex-col justify-center items-center'>
-                <img src={image} alt=""
+            replace={useReplace}
+            to={`/product/${product.title}`}
+            state={{ productDetails: product }}
+        >
+            <div className='p-8 flex flex-col justify-center items-center text-center'>
+                <img src={product.image} alt=""
                     className='size-48 rounded-md'
                 />
                 <div
                     className='mt-2 border-b-2 border-black'
-                >{title}</div>
+                >{product.title}</div>
                 <div
                     className='mt-1'
-                >{price}</div>
+                >{product.price}</div>
             </div></Link>
 
     )

@@ -1,25 +1,9 @@
 import React from 'react'
-import background from '../../assets/images/category_background.jpg';
+import background from '../../assets/backgrounds/style.jpg'
 import { SectionItem } from '..';
+import { styles } from '../../data';
 
 
-const styles = [
-    {
-        title: 'Jewellery Set',
-    },
-    {
-        title: 'Anklets',
-    },
-    {
-        title: 'Bracelets',
-    },
-    {
-        title: 'Pendants',
-    },
-    {
-        title: 'Ring',
-    },
-];
 
 function StyleSection() {
     return (

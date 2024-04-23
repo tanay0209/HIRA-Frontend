@@ -1,6 +1,5 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
-import Dropdown from './Dropdown'
 
 
 function NavItem({ title, link }) {

@@ -1,8 +1,6 @@
-import React from 'react'
-import background from "../../assets/images/category_background.jpg"
 import { Link } from 'react-router-dom'
 
-function SectionItem({ title }) {
+function SectionItem({ title, image }) {
     return (
         <>
             <div className='flex flex-col items-center'>
@@ -11,7 +9,7 @@ function SectionItem({ title }) {
                 >
                     <img
                         className='rounded-full size-36 lg:size-44 mx-4 shadow-md'
-                        src={background} alt="Background" />
+                        src={image} alt="Background" />
                     <div className='font-bold mt-2 text-center'>{title}</div>
                 </Link>
             </div>

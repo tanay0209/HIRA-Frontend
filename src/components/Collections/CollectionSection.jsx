@@ -1,24 +1,8 @@
 import React from 'react';
 import { SectionItem } from '..';
 import background from '../../assets/images/category_background.jpg';
+import { categories } from "../../data"
 
-const categories = [
-    {
-        title: 'Jewellery Set',
-    },
-    {
-        title: 'Anklets',
-    },
-    {
-        title: 'Bracelets',
-    },
-    {
-        title: 'Pendants',
-    },
-    {
-        title: 'Ring',
-    },
-];
 
 function CollectionSection() {
     return (
@@ -37,7 +21,7 @@ function CollectionSection() {
             </h2>
             <div className='flex h-2/3 lg:h-3/4 items-center max-w-2xl m-auto justify-center flex-wrap mt-4 gap-3'>
                 {categories.map(category => (
-                    <SectionItem key={category.title} title={category.title} />
+                    <SectionItem key={category.title} title={category.title} image={category.image} />
                 ))}
             </div>
         </div>

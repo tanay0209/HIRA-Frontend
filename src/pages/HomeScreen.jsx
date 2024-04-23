@@ -8,7 +8,7 @@ function HomeScreen() {
             <ImageCarousel />
             <CollectionSection />
             <ServiceSection />
-            <StyleSection />
+            {/* <StyleSection /> */}
             <BestSellerSection />
             <TestimonialSection />
         </div>

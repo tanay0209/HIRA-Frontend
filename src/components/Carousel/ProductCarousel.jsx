@@ -1,8 +1,9 @@
 import React from 'react'
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-import background from '../../assets/images/category_background.jpg';
+import { bestSeller } from '../../data';
 import CarouselItem from './CarouselItem';
+
 const responsive = {
     superLargeDesktop: {
         breakpoint: { max: 4000, min: 3000 },
@@ -21,36 +22,10 @@ const responsive = {
         items: 1
     }
 };
-const items = [{
-    id: 1,
-    image: background,
-    title: 'Product',
-    price: "50"
-}, {
-    id: 3,
-    image: background,
-    title: 'Product',
-    price: "50"
-}, {
-    id: 2,
-    image: background,
-    title: 'Product',
-    price: "50"
-}, {
-    id: 4,
-    image: background,
-    title: 'Product',
-    price: "50"
-}, {
-    id: 5,
-    image: background,
-    title: 'Product',
-    price: "50"
-},
-]
 
 
-function ProductCarousel({ className = '', duration }) {
+
+function ProductCarousel({ className = '', duration, useReplace = false }) {
     return (
         <Carousel
             responsive={responsive}
@@ -63,8 +38,8 @@ function ProductCarousel({ className = '', duration }) {
             keyBoardControl={true}
             transitionDuration={2000}
         >
-            {items.map((item) => {
-                return <CarouselItem key={item.id} item={item} />
+            {bestSeller.map((product) => {
+                return <CarouselItem key={product.id} product={product} useReplace={useReplace} />
             })}
         </Carousel>
 

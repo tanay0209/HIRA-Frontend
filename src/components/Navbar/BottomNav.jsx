@@ -12,17 +12,19 @@ const BottomNav = () => {
                         name={`${open ? "close" : "menu"}`}></ion-icon>
                 </div>
                 <ul className='lg:flex hidden uppercase items-center gap-4'>
-                    <NavItem title={'About Us'} />
-                    <NavItem title={'Contact Us'} link={'/contact'} />
                     <Dropdown />
+                    <NavItem title={'About Us'} link={'/about'} />
+                    <NavItem title={'Contact Us'} link={'/contact'} />
+                    <NavItem title={'Dashboard'} link={'/admin/dashboard'} />
                 </ul>
                 {/* Mobile Nav */}
                 <ul
                     className={`lg:hidden bg-primary fixed w-full top-0 overflow-y-auto bottom-0 py-24 pl-4 duration-500 ${open ? "left-0" : "left-[-100%]"}`}
                 >
+                    <Dropdown />
                     <NavItem title={'About Us'} link={'/about'} />
                     <NavItem title={'Contact Us'} link={'/contact'} />
-                    <Dropdown />
+                    <NavItem title={'Dashboard'} link={'/admin/dashboard'} />
                 </ul>
             </div>
         </div>

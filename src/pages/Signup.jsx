@@ -1,25 +1,34 @@
 import React, { useState } from 'react'
 import { useForm } from 'react-hook-form'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Layout } from '../components';
 import { CiSearch } from "react-icons/ci";
+import { useDispatch } from 'react-redux';
+import { signup } from '../store/authSlice';
 
-// TODO: MAKE AND HANDLE API CALL 
+
 
 function Signup() {
     const { register, handleSubmit, setError, formState: { errors, isSubmitting }, reset, watch } = useForm()
     const [showPassword, setShowPassword] = useState(false)
     const [showConfirmPassword, setShowConfirmPassword] = useState(false)
+    const dispatch = useDispatch()
+    const navigate = useNavigate()
     const onSubmit = (data) => {
         reset()
-        try {
-
-        } catch (error) {
-            setError("email", {
-                message: "This email is already taken"
-            })
-        }
+        // try {
+        //     dispatch(signup(data))
+        //     navigate('/')
+        // }
+        // catch (error) {
+        //     setError("email", {
+        //         message: "This email is already taken"
+        //     })
+        dispatch(signup(data))
+        navigate('/login')
     }
+
+
 
     return (
         <Layout>

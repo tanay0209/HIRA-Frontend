@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 
 import { CiSearch } from "react-icons/ci";
@@ -6,27 +6,18 @@ import NavIconItem from './NavIconItem';
 import { BsCart2, BsHeart } from "react-icons/bs";
 import { FiUser } from "react-icons/fi";
 import logo from "../../assets/images/logo.png"
+import { useSelector } from 'react-redux';
 
-const icons = [
-    {
-        path: "/",
-        component: <FiUser />,
-        title: "Account"
-    },
-    {
-        path: "/wishlist",
-        component: <BsHeart />,
-        title: "Wishlist"
-    },
-    {
-        path: "/cart",
-        component: <BsCart2 />,
-        title: "Cart"
-    },
-]
 
 function TopNavigation() {
-
+    const [user, setUser] = useState(null)
+    const currentUser = useSelector(state => state.auth.userData)
+    // useEffect(() => {
+    //     const currentUser = localStorage.getItem('user')
+    //     if (currentUser) {
+    //         setUser(currentUser)
+    //     }
+    // }, [user])
     return (
         <>
             <nav className='flex items-center fixed w-screen lg:justify-around flex-wrap p-3 bg-primary shadow z-50 top-0 justify-between'>
@@ -47,10 +38,9 @@ function TopNavigation() {
                     </div>
                 </div>
                 <div className='flex justify-between cursor-pointer'>
-                    {icons.map((icon) => {
-                        return <NavIconItem key={icon.title} path={icon.path} component={icon.component} title={icon.title} />
-                    })}
-
+                    <NavIconItem key='Account' path={currentUser ? '/profile' : '/login'} component={<FiUser />} title='Account' />
+                    <NavIconItem key='Wishlist' path={currentUser ? '/wishlist' : '/login'} component={<BsHeart />} title='Wishlist' />
+                    <NavIconItem key='Cart' path={currentUser ? '/cart' : '/login'} component={<BsCart2 />} title='Cart' />
                 </div>
 
             </nav ></>
