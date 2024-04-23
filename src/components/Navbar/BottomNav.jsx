@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import NavItem from './NavItem'
+import NavItem from './Navitem'
 import Dropdown from './Dropdown';
 
 const BottomNav = () => {
